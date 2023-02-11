@@ -10,7 +10,7 @@
                 <input required type="password" id="password" name="password" v-model="password" />
             </div>
             <div class="flex flex-col">
-                <button type="submit">Login</button>
+                <button class="btn" type="submit">LOGIN <Icon name="mdi:login-variant"/></button>
             </div>
         </form>
     </div>
@@ -19,9 +19,11 @@
 <script setup>
 const email = ref('')
 const password = ref('')
+const user_name = useCookie('name')
 
 const handleLogin = () => {
     if (email.value === 'admin' || password.value === 'admin') {
+        user_name.value = 'Admin User'
         navigateTo('home')
     }
 }

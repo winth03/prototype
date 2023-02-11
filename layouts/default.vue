@@ -1,6 +1,6 @@
 <template>
-    <div class="px-auto min-w-max">
-        <div class="aspect-[9/16] bg-pink-200 max-h-[100vh] p-8">
+    <div class="w-full h-full">
+        <div class="aspect-[9/16] bg-main max-h-[100vh] p-8">
             <slot />
         </div>
     </div>

@@ -18,7 +18,7 @@
                 <input required type="password" id="confirmPassword" name="confirmPassword" v-model="confirmPassword" />
             </div>
             <div class="flex flex-col">
-                <button type="submit">Login</button>
+                <button class="btn" type="submit">REGISTER</button>
             </div>
         </form>
     </div>
@@ -29,6 +29,7 @@ const name = ref('')
 const email = ref('')
 const password = ref('')
 const confirmPassword = ref('')
+const user_name = useCookie('name')
 
 const handleRegister = () => {
     if (confirmPassword.value !== password.value) {
@@ -36,6 +37,7 @@ const handleRegister = () => {
         return
     }
 
+    user_name.value = name.value
     navigateTo('home')
 }
 </script>
