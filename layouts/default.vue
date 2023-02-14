@@ -1,6 +1,6 @@
 <template>
-    <div class="bg-main w-[100vw] h-[100vh] flex flex-col items-center">
-        <div class="flex flex-col items-center h-full aspect-[9/16]">
+    <div class="w-[100vw] h-[100vh] flex flex-col items-center overflow-x-hidden">
+        <div class="flex flex-col items-center container sm:w-auto sm:aspect-[9/16]">
             <slot />
         </div>
     </div>

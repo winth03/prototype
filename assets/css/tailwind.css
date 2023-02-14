@@ -5,7 +5,7 @@
 @layer base {
     /* Base styles */
     body {
-        @apply w-[100vw] h-[100vh] font-chanom;
+        @apply bg-main w-full h-full font-chanom overscroll-contain;
     }
 
     h1 {
@@ -61,11 +61,13 @@
         background-image: url('../images/bg.jpg');
         background-size: 100% 100%;
         background-position: center;
+        background-repeat: repeat-y;
     }
 
     .bg-main-index {
         background-image: url('../images/bg-main.png');
         background-size: 100% 100%;
         background-position: center;
+        background-repeat: repeat-y;
     }
 }
