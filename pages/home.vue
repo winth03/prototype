@@ -11,7 +11,7 @@
                 <span class="text-gray-500">Type: {{ personality }}</span><br />
                 <b>About me</b><br />
                 {{ bio }}
-                <div class="mx-auto bottom-0 p-4">
+                <div class="bottom-0 p-4">
                     <ul class="flex text-4xl">
                         <li><NuxtLink class="px-8" to="/home">Match</NuxtLink></li>
                         <li><NuxtLink class="border-l-2 border-black px-8" to="/profile">Profile</NuxtLink></li>
