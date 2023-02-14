@@ -1,7 +1,7 @@
 <template>
-    <div class="flex flex-col items-center text-center py-36 space-y-36">
-        <h1 class="text-[#ff83a8] text-6xl font-bold font-nick">inLove</h1>
-        <div class="flex max-h-fit max-w-fit bg-white p-8 rounded-md">
+    <div class="container bg-main-index">
+        <!-- <h1 class="text-[#ff83a8] text-6xl font-bold font-nick">inLove</h1> -->
+        <div class="max-h-fit max-w-fit absolute top-[64%]">
             <ul class="text-left">
                 <li><NuxtLink to="login">LOGIN <Icon name="mdi:login-variant"/></NuxtLink></li>
                 <li><NuxtLink to="register">REGISTER <Icon name="mdi:account"/></NuxtLink></li>

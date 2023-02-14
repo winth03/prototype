@@ -4,8 +4,16 @@
 
 @layer base {
     /* Base styles */
+    body {
+        @apply w-[100vw] h-[100vh] font-chanom;
+    }
+
     h1 {
         @apply text-4xl font-bold underline text-center;
+    }
+
+    div {
+        @apply text-lg;
     }
 }
 
@@ -13,6 +21,10 @@
     /* Component styles */
     .btn {
         @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
+    }
+
+    .container {
+        @apply h-full w-full flex flex-col justify-center items-center relative;
     }
 }
 
@@ -23,11 +35,37 @@
         src: url('../fonts/Nickainley-Normal.otf');
     }
 
+    @font-face {
+        font-family: 'Samuel';
+        src: url('../fonts/Samuel.ttf');
+    }
+    
+    @font-face {
+        font-family: 'Chanom';
+        src: url('../fonts/Chanom.ttf');
+    }
+
     .font-nick {
         font-family: 'Nickainley', cursive;
     }
 
+    .font-samuel {
+        font-family: 'Samuel';
+    }
+
+    .font-chanom {
+        font-family: 'Chanom';
+    }
+
     .bg-main {
-        background-color: #ddf1ff;
+        background-image: url('../images/bg.jpg');
+        background-size: 100% 100%;
+        background-position: center;
+    }
+
+    .bg-main-index {
+        background-image: url('../images/bg-main.png');
+        background-size: 100% 100%;
+        background-position: center;
     }
 }
