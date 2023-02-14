@@ -8,18 +8,12 @@
             <div class="text-2xl bg-white w-full h-full p-4">
                 <span class="text-gray-500">Type: {{ personality }}</span><br />
                 <b>About me</b><br />
-                <span v-if="!edit">{{ bio }}<br /><button class="bg-pink-200 p-2 border-2 border-black rounded-md" @click="handleEdit">Edit</button></span>
+                <span v-if="!edit">{{ bio }}<br /><button class="bg-pink-200 p-2 border-2 border-black rounded-md" @click="handleEdit">Edit <Icon name="mdi:pencil" /></button></span>
                 <span v-else>
                     <textarea class="w-full border-2 border-gray-500" v-model="bio"></textarea><br />
-                    <button class="bg-pink-200 p-2 border-2 border-black rounded-md" @click="handleEdit">Save</button>
+                    <button class="bg-pink-200 p-2 border-2 border-black rounded-md" @click="handleEdit">Save <Icon name="mdi:floppy" /></button>
                 </span>
-                <div class="bottom-0 p-4">
-                    <ul class="flex text-4xl">
-                        <li><NuxtLink class="px-8" to="/home">Match</NuxtLink></li>
-                        <li><NuxtLink class="border-l-2 border-black px-8" to="/profile">Profile</NuxtLink></li>
-                        <li><NuxtLink class="border-l-2 border-black px-8" to="/">Logout</NuxtLink></li>
-                    </ul>
-                </div>
+                <NavBar />
             </div>
         </div>
     </div>
@@ -54,7 +48,5 @@ onBeforeMount(() => {
 </script>
 
 <style scoped>
-.router-link-exact-active {
-    @apply text-gray-500;
-}
+
 </style>
