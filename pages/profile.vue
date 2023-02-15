@@ -23,7 +23,7 @@
 import Images from '@/assets/images'
 
 const name = useCookie('name')
-const personality = ref('INFJ-A')
+const personality = useCookie('personality')
 const age = ref(18)
 const bio = useCookie('bio')
 const edit = ref(false)
