@@ -1,8 +1,8 @@
 <template>
     <div class="container">
         <div class="relative aspect-square w-full object-contain">                
-            <img class="aspect-square object-cover w-full h-full" :src="Images.mungkud">
-            <button class="absolute left-8 bottom-8 text-2xl bg-red-600 p-2 my-2 border-2"><Icon name="mdi:heart-off"/> Reject</button>
+            <img class="aspect-square object-cover w-full h-full" :src="currImage">
+            <button class="absolute left-8 bottom-8 text-2xl bg-red-600 p-2 my-2 border-2" @click="handleReject"><Icon name="mdi:heart-off"/> Reject</button>
             <button class="absolute right-8 bottom-8 text-2xl bg-green-600 p-2 my-2 border-2"><Icon name="mdi:heart"/> Match</button>
         </div>
         <div class="container">
@@ -24,9 +24,15 @@ const name = ref('Frung Fringz')
 const personality = ref('INTJ-A')
 const age = ref(19)
 const bio = ref('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies ultricies, nisl nisl aliquam nisl, nec aliquam nisl nisl nec nisl. Sed euismod, nisl nec ultricies ultricies, nisl nisl aliquam nisl, nec aliquam nisl nisl nec nisl.')
+const currImage = ref(Images.mungkud)
 
 const handleLogout = () => {
     navigateTo('/')
+}
+
+const handleReject = () => {
+    currImage.value = Images.mbappe
+    bio.value = 'MBAPPE!!! '
 }
 
 useHead({
